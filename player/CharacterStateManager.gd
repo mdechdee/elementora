@@ -6,6 +6,7 @@ var curent_state: BaseState
 @onready var states = {
 	BaseState.State.IDLE: $Idle,
 	BaseState.State.RUN: $Run,
+	BaseState.State.JUMP: $Jump,
 	BaseState.State.FALL: $Fall,
 	BaseState.State.LAND: $Land,
 }

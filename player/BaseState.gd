@@ -1,7 +1,7 @@
 class_name BaseState
 extends Node
 
-enum State { NULL, IDLE, RUN, FALL, LAND }
+enum State { NULL, IDLE, RUN, JUMP, FALL, LAND }
 var player: Player
 var state_string_name = "Base"
 

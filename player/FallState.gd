@@ -11,7 +11,7 @@ func enter():
 
 
 func physics_process(_delta: float) -> State:
+	player.move()
 	if player.is_on_floor():
 		return State.LAND
-
 	return State.NULL

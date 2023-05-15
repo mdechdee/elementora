@@ -18,6 +18,9 @@ func physics_process(_delta: float) -> State:
 		player.animations.flip_h = false
 	if axis == 0:
 		return State.IDLE
-
+	
+	if Input.is_action_just_pressed("jump"):
+		return State.JUMP
+	
 	player.move()
 	return State.NULL
