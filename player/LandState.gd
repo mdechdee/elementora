@@ -11,4 +11,6 @@ func enter():
 
 
 func physics_process(_delta: float) -> State:
-	return State.IDLE
+	if player.animations.frame_progress == 1.0:
+		return State.IDLE
+	return State.NULL

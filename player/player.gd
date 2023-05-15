@@ -1,7 +1,8 @@
 class_name Player
 extends CharacterBody2D
 
-@export var speed = 30
+@export var speed: float = 60
+@export var jump_speed: float = 150
 @export var fallback_player_element: Element.Type = Element.Type.ICE
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
