@@ -1,36 +1,24 @@
-class_name ElementTile
+class_name ElementTile # implemented by FireTile, WaterTile, WindTile, IceTile
 extends Resource
 
 @export var type: Element.Type
 @export var active: bool
 
+# to be injected by the tilemap
+var elements_tile_map: ElementsTileMap
+# can't inject cell_coor due to resource being shared to all the cells
+#var cell_coor: Vector2i
+
+func _ready():
+	assert(elements_tile_map != null, "Please inject ElementsTileMap to all element tiles")
+#	assert(cell_coor != null, "Please inject cell coordinates to all element tiles")
+
+# interface
+func react_cell_to_projectile(cell_coor: Vector2i, projectile: Projectile):
+	pass
 
 static func create_element_tile(_type: Element.Type, _active: bool) -> ElementTile:
 	var element_tile = ElementTile.new()
 	element_tile.active = _active
 	element_tile.type = _type
-
 	return element_tile
-
-
-func is_passable() -> bool:
-	match type:
-		_:
-			return false
-
-
-func get_element_handler() -> BaseElementTileHandler:
-	var element_handler: BaseElementTileHandler
-	print(type, Element.STRING_MAP[type])
-	match type:
-		Element.Type.FIRE:
-			element_handler = FireElementTileHandler.new()
-		_:
-			element_handler = BaseElementTileHandler.new()
-
-	return element_handler
-
-
-func interact_with(player: Player, tile_map: TileMap, position: Vector2i):
-	var element_handler = get_element_handler()
-	element_handler.interact_with_player(player, tile_map, position, self)

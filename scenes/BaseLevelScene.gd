@@ -2,7 +2,7 @@ class_name BaseLevelScene
 extends BaseScene
 
 @onready var player: Player = $Player
-@onready var level_tile_map: TileMap = $Level
+@onready var level_tile_map: TileMap = $ElementsTileMap
 
 
 func _ready():

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="IceTile" load_steps=2 format=3 uid="uid://rkynlu32o60d"]
+
+[ext_resource type="Script" path="res://resource/IceTile.gd" id="1_5eenf"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_5eenf")
+type = 4
+active = false

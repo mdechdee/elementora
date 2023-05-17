@@ -1,14 +1,16 @@
-[gd_scene load_steps=26 format=3 uid="uid://chplh0o6jdofk"]
+[gd_scene load_steps=27 format=3 uid="uid://chplh0o6jdofk"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_j4omo"]
 [ext_resource type="Texture2D" uid="uid://btici8wg86eix" path="res://art_temp/PlayerSpriteSheetCyber.png" id="1_tewx2"]
 [ext_resource type="Script" path="res://player/CharacterStateManager.gd" id="3_0yrmu"]
+[ext_resource type="Script" path="res://player/ProjectileShooter.gd" id="3_sni0n"]
 [ext_resource type="Script" path="res://player/IdleState.gd" id="4_603cn"]
+[ext_resource type="PackedScene" uid="uid://ktx3tmcjbqpm" path="res://components/projectile/projectile.tscn" id="4_tygr4"]
 [ext_resource type="Script" path="res://player/RunState.gd" id="5_dvfl5"]
 [ext_resource type="Script" path="res://player/FallState.gd" id="6_dellh"]
 [ext_resource type="Script" path="res://player/LandState.gd" id="7_uban0"]
 [ext_resource type="Script" path="res://player/Jump.gd" id="8_4kdao"]
-[ext_resource type="Script" path="res://player/ElementDetection.gd" id="8_i822i"]
+[ext_resource type="Script" path="res://player/ElementChooser.gd" id="11_rso2p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btnuq"]
 atlas = ExtResource("1_tewx2")
@@ -129,9 +131,6 @@ height = 16.0
 [sub_resource type="LabelSettings" id="LabelSettings_vgotj"]
 font_size = 7
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qhpaj"]
-radius = 19.0
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_j4omo")
 
@@ -144,6 +143,10 @@ animation = &"run"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_wo7uh")
+
+[node name="ProjectileShooter" type="Node2D" parent="."]
+script = ExtResource("3_sni0n")
+projectile_scene = ExtResource("4_tygr4")
 
 [node name="CharacterStateManager" type="Node" parent="."]
 script = ExtResource("3_0yrmu")
@@ -171,20 +174,19 @@ offset_bottom = -5.0
 text = "state"
 label_settings = SubResource("LabelSettings_vgotj")
 
-[node name="ElementDetection" type="Area2D" parent="."]
-visible = false
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("8_i822i")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ElementDetection"]
-shape = SubResource("CircleShape2D_qhpaj")
-debug_color = Color(0.619608, 0.466667, 0.686275, 0.419608)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 enable_mode = 1
+
+[node name="ElementSwitcher" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("11_rso2p")
+
+[node name="SwitchCooldownTimer" type="Timer" parent="ElementSwitcher"]
+wait_time = 0.5
+one_shot = true
+autostart = true
 
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

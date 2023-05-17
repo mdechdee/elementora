@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkxi2ys36q0vq"]
+
+[ext_resource type="Script" path="res://components/element_tile_handler/ElementDetection.gd" id="1_re2r0"]
+
+[node name="ElementDetection" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_re2r0")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

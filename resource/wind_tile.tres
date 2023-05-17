@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WindTile" load_steps=2 format=3 uid="uid://bnh7xaepnera5"]
+
+[ext_resource type="Script" path="res://resource/WindTile.gd" id="1_amhv6"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_amhv6")
+type = 5
+active = false
