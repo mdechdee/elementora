@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpawjsubbn12y"]
+
+[ext_resource type="Script" path="res://scenes/autoload/SceneManager.gd" id="1_d4yfg"]
+[ext_resource type="PackedScene" uid="uid://d1x302n8dm5e4" path="res://scenes/main_menu.tscn" id="1_vjpoo"]
+[ext_resource type="PackedScene" uid="uid://d2lj1d388w5wp" path="res://scenes/first_level.tscn" id="3_b41y8"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_d4yfg")
+scene_map = {
+"main_menu": ExtResource("1_vjpoo")
+}
+level_scenes = [ExtResource("3_b41y8"), ExtResource("3_b41y8")]

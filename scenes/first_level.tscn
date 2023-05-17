@@ -1,18 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2lj1d388w5wp"]
+[gd_scene load_steps=6 format=3 uid="uid://d2lj1d388w5wp"]
 
 [ext_resource type="PackedScene" uid="uid://chplh0o6jdofk" path="res://player/player.tscn" id="1_1nubb"]
 [ext_resource type="Script" path="res://scenes/BaseLevelScene.gd" id="1_g72f7"]
 [ext_resource type="PackedScene" uid="uid://mbkor2h1ykp4" path="res://components/element_tile_handler/elements_tile_map.tscn" id="4_5886p"]
+[ext_resource type="PackedScene" uid="uid://c5qnbx0m37728" path="res://components/exit_door.tscn" id="4_gs3gs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bmcyp"]
 font_size = 8
 
-[node name="Node2D" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource("1_g72f7")
-scene_type = 2
 
 [node name="Player" parent="." instance=ExtResource("1_1nubb")]
-position = Vector2(10, 13)
+unique_name_in_owner = true
+position = Vector2(14, 102)
 
 [node name="ElementsTileMap" parent="." instance=ExtResource("4_5886p")]
 layer_0/tile_data = PackedInt32Array(458752, 0, 0, 458753, 0, 0, 524289, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524303, 0, 0, 524302, 0, 0, 524301, 0, 0, 524288, 0, 0, 458754, 65536, 0, 458755, 65536, 0, 458756, 65536, 0, 458757, 65536, 0, 458758, 65536, 0, 458759, 65536, 0, 458760, 65536, 0, 458761, 65536, 0, 458762, 65536, 0, 458763, 65536, 0, 458764, 65536, 0, 524300, 65536, 0, 524299, 65536, 0, 524298, 65536, 0, 524297, 65536, 0, 524296, 65536, 0, 524295, 65536, 0, 524294, 65536, 0, 524293, 65536, 0, 524292, 65536, 0, 524291, 65536, 0, 524290, 65536, 0, 458737, 131072, 0, 524273, 65536, 0, 393201, 0, 0, 589809, 196608, 0, 655345, 0, 4, 720881, 65536, 4, 786417, 0, 5)
@@ -25,3 +26,58 @@ offset_bottom = 100.0
 text = "These tiles are necessary 
 for the code, don't remove"
 label_settings = SubResource("LabelSettings_bmcyp")
+
+[node name="ExitDoor" parent="." instance=ExtResource("4_gs3gs")]
+z_index = -1
+
+[node name="WinUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="WinUI"]
+anchors_preset = -1
+anchor_left = 0.199219
+anchor_top = 0.166667
+anchor_right = 0.800781
+anchor_bottom = 0.833333
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="WinUI/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinUI/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="WinUI/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "YOU WIN"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WinUI/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="NextLevelButton" type="Button" parent="WinUI/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.52
+text = "Next Level"
+
+[node name="MainMenuButton" type="Button" parent="WinUI/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.52
+text = "Main Menu"
+
+[connection signal="pressed" from="WinUI/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="WinUI/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

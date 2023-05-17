@@ -1,5 +1,5 @@
 class_name MainMenu
-extends BaseScene
+extends Node
 
 enum Menu {
 	START,
@@ -41,7 +41,7 @@ func select():
 	match selected:
 		Menu.START:
 			print("start")
-			on_should_change_scene.emit(BaseScene.Scenes.ELEMENT_SELECT)
+			SceneManager.change_to_level(1)
 		Menu.QUIT:
 			print("quit")
 			get_tree().quit()
