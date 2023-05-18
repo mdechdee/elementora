@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2xftrhlrkna7"
-path="res://.godot/imported/Door.svg-cc3e5da197e68bf6d230ec084bcdba7b.ctex"
+uid="uid://jrg05bhwucio"
+path="res://.godot/imported/Rock.svg-3d48a5c30d842c747785d03fb3f8ae55.ctex"
 metadata={
+"editor_dark_theme": true,
+"editor_scale": 1.0,
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Door.svg"
-dest_files=["res://.godot/imported/Door.svg-cc3e5da197e68bf6d230ec084bcdba7b.ctex"]
+source_file="res://Bad Art/Rock.svg"
+dest_files=["res://.godot/imported/Rock.svg-3d48a5c30d842c747785d03fb3f8ae55.ctex"]
 
 [params]
 
@@ -33,5 +36,5 @@ process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
 svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
+editor/scale_with_editor_scale=true
+editor/convert_colors_with_editor_theme=true

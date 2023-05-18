@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://b5nvfe6djeje1"]
 
-[ext_resource type="Texture2D" uid="uid://c2xftrhlrkna7" path="res://art/Door.svg" id="1_jsoxd"]
-[ext_resource type="Texture2D" uid="uid://ndg28t0prao0" path="res://art/Initial Tile.svg" id="2_0afef"]
-[ext_resource type="Texture2D" uid="uid://b45w18h3ls8w0" path="res://art/Temp ice.svg" id="3_tjgn4"]
-[ext_resource type="Texture2D" uid="uid://cmf8tl2d3j8rc" path="res://art/Water.svg" id="4_7q2gm"]
-[ext_resource type="Texture2D" uid="uid://djdpgkqp4r3rb" path="res://art/Wind.svg" id="5_ehcej"]
-[ext_resource type="Texture2D" uid="uid://ylar7o6rl7dq" path="res://art/Lever.svg" id="6_wiq10"]
+[ext_resource type="Texture2D" uid="uid://c2xftrhlrkna7" path="res://Bad Art/Door.svg" id="1_jsoxd"]
+[ext_resource type="Texture2D" uid="uid://ndg28t0prao0" path="res://Bad Art/Initial Tile.svg" id="2_0afef"]
+[ext_resource type="Texture2D" uid="uid://b45w18h3ls8w0" path="res://Bad Art/Temp ice.svg" id="3_tjgn4"]
+[ext_resource type="Texture2D" uid="uid://cmf8tl2d3j8rc" path="res://Bad Art/Water.svg" id="4_7q2gm"]
+[ext_resource type="Texture2D" uid="uid://djdpgkqp4r3rb" path="res://Bad Art/Wind.svg" id="5_ehcej"]
+[ext_resource type="Texture2D" uid="uid://ylar7o6rl7dq" path="res://Bad Art/Lever.svg" id="6_wiq10"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cuped"]
 texture = ExtResource("2_0afef")

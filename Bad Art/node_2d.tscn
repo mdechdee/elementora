@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://catgeuixe3mx5"]
 
-[ext_resource type="Texture2D" uid="uid://ndg28t0prao0" path="res://art/Initial Tile.svg" id="1_bsdhv"]
-[ext_resource type="Texture2D" uid="uid://jrg05bhwucio" path="res://art/Rock.svg" id="2_7v835"]
-[ext_resource type="Texture2D" uid="uid://b45w18h3ls8w0" path="res://art/Temp ice.svg" id="3_ub26p"]
-[ext_resource type="Texture2D" uid="uid://cmf8tl2d3j8rc" path="res://art/Water.svg" id="4_brf58"]
+[ext_resource type="Texture2D" uid="uid://ndg28t0prao0" path="res://Bad Art/Initial Tile.svg" id="1_bsdhv"]
+[ext_resource type="Texture2D" uid="uid://jrg05bhwucio" path="res://Bad Art/Rock.svg" id="2_7v835"]
+[ext_resource type="Texture2D" uid="uid://b45w18h3ls8w0" path="res://Bad Art/Temp ice.svg" id="3_ub26p"]
+[ext_resource type="Texture2D" uid="uid://cmf8tl2d3j8rc" path="res://Bad Art/Water.svg" id="4_brf58"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0dd2y"]
 texture = ExtResource("1_bsdhv")

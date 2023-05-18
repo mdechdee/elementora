@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxma0uwtlhynf"]
+
+[ext_resource type="Texture2D" uid="uid://bu2gr1jnl2ttd" path="res://bg_castle.png" id="1_5wu0n"]
+
+[node name="Story" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BgCastle" type="Sprite2D" parent="."]
+position = Vector2(127.5, 74)
+scale = Vector2(0.256836, 0.292969)
+texture = ExtResource("1_5wu0n")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 5.0
+offset_right = 146.0
+offset_bottom = 18.0
+text = "Namaste"
+horizontal_alignment = 1
+
+[node name="Story" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 1908.0
+offset_bottom = 147.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 23.0
+offset_right = 253.0
+offset_bottom = 142.0
+text = "So You!  Yes you! well you have just opened the game right? and has plenty of time to read this (you are very cool like me). Let me tell you the story :-
+
+You are a great person and had known many spells to use elements . but guess what as every story things are gonna be get bad so your world is has gotten disbalanced and you are the only one who can save because everyone has been converted in elemental monster and are protecting the \"ELEMENT OF HARMONY\" so i guess you know what to do. kill them and be alive you are the only one who can save the earth with the knowledge you forgot. You will use elements to get past the enemies "

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b45w18h3ls8w0"
-path="res://.godot/imported/Temp ice.svg-d58445240091b1d9cd5ccd54dd777147.ctex"
+path="res://.godot/imported/Temp ice.svg-a638065398c19eb981d9d064f1b29dfa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Temp ice.svg"
-dest_files=["res://.godot/imported/Temp ice.svg-d58445240091b1d9cd5ccd54dd777147.ctex"]
+source_file="res://Bad Art/Temp ice.svg"
+dest_files=["res://.godot/imported/Temp ice.svg-a638065398c19eb981d9d064f1b29dfa.ctex"]
 
 [params]
 

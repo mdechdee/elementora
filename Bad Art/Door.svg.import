@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmf8tl2d3j8rc"
-path="res://.godot/imported/Water.svg-ed60bec3f36286e34feacdf6ae69f661.ctex"
+uid="uid://c2xftrhlrkna7"
+path="res://.godot/imported/Door.svg-fbc01c6ff21c2d21084f352d2f8cbe84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Water.svg"
-dest_files=["res://.godot/imported/Water.svg-ed60bec3f36286e34feacdf6ae69f661.ctex"]
+source_file="res://Bad Art/Door.svg"
+dest_files=["res://.godot/imported/Door.svg-fbc01c6ff21c2d21084f352d2f8cbe84.ctex"]
 
 [params]
 

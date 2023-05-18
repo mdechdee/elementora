@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ylar7o6rl7dq"
-path="res://.godot/imported/Lever.svg-bad46feeede112255330d81438646dc5.ctex"
+path="res://.godot/imported/Lever.svg-e3ca132fca00cfc0a9f9927e677c4f5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Lever.svg"
-dest_files=["res://.godot/imported/Lever.svg-bad46feeede112255330d81438646dc5.ctex"]
+source_file="res://Bad Art/Lever.svg"
+dest_files=["res://.godot/imported/Lever.svg-e3ca132fca00cfc0a9f9927e677c4f5c.ctex"]
 
 [params]
 

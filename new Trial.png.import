@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jrg05bhwucio"
-path="res://.godot/imported/Rock.svg-348fa85bc70c79d27abdc1e6e00303eb.ctex"
+uid="uid://5mqi3j4bnapy"
+path="res://.godot/imported/new Trial.png-049722d2d2669a22c01c8e31bab5a3ce.ctex"
 metadata={
-"editor_dark_theme": true,
-"editor_scale": 1.5,
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Rock.svg"
-dest_files=["res://.godot/imported/Rock.svg-348fa85bc70c79d27abdc1e6e00303eb.ctex"]
+source_file="res://new Trial.png"
+dest_files=["res://.godot/imported/new Trial.png-049722d2d2669a22c01c8e31bab5a3ce.ctex"]
 
 [params]
 
@@ -35,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=true
-editor/convert_colors_with_editor_theme=true
